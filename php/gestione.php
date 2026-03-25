@@ -174,7 +174,7 @@ $esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="/MateiManuelaNatalis_FSL/php/orientamento.php" class="btn btn-outline-dark">&larr; Orientamento</a>
+  <a href="/MateiManuelaNatalis_FSL/php/orientamento.php" class="btn btn-outline-dark">&larr; Indietro</a>
   <a href="/MateiManuelaNatalis_FSL/index.php" class="btn btn-outline-dark">Home &rarr;</a>
 </div>
 
