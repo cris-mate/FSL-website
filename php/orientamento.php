@@ -57,8 +57,8 @@
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="/MateiManuelaNatalis_FSL/php/stage.php" class="btn btn-outline-dark">&larr; Stage</a>
-  <a href="/MateiManuelaNatalis_FSL/php/gestione.php" class="btn btn-outline-dark">Gestione DB &rarr;</a>
+  <a href="/MateiManuelaNatalis_FSL/php/stage.php" class="btn btn-outline-dark">&larr; Indietro</a>
+  <a href="/MateiManuelaNatalis_FSL/php/gestione.php" class="btn btn-outline-dark">Prossima sezione &rarr;</a>
 </div>
 
 <?php include '../php/includes/footer.php'; ?>
