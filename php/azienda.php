@@ -44,7 +44,7 @@
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
   <a href="/MateiManuelaNatalis_FSL/index.php" class="btn btn-outline-dark">&larr; Home</a>
-  <a href="/MateiManuelaNatalis_FSL/php/stage.php" class="btn btn-outline-dark">Stage &rarr;</a>
+  <a href="/MateiManuelaNatalis_FSL/php/stage.php" class="btn btn-outline-dark">Prossima sezione &rarr;</a>
 </div>
 
 <?php include '../php/includes/footer.php'; ?>
