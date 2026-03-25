@@ -4,7 +4,7 @@
 <section class="hero-section text-center py-5 mb-4 rounded-3">
   <h1 class="display-5 fw-bold">Percorsi per le Competenze Trasversali e l'Orientamento</h1>
   <p class="lead mt-3">Matei Manuela Natalis — Classe 5ª SIA</p>
-  <p class="text-muted">IIS Don Milani, Montichiari (BS) — A.S. 2025/2026</p>
+  <p class="text-muted">Istituto di Istruzione Superiore <strong>Don Milani</strong>, Montichiari (BS) — A.S. 2025/2026</p>
 </section>
 
 <!-- Descrizione del Progetto -->
