@@ -11,7 +11,7 @@
 <section class="mb-5">
   <h2 class="section-title mb-3">Il Progetto</h2>
   <p>
-    Questo sito web rappresenta il mio portfolio digitale dei Percorsi per le <strong>Competenze Trasversali e l'Orientamento (PCTO)</strong>, 
+    Questo sito web rappresenta il mio portfolio digitale dei <strong>Percorsi per le Competenze Trasversali e l'Orientamento (PCTO)</strong>, 
     realizzato come progetto finale del percorso scolastico nell'indirizzo <strong>Sistemi Informativi Aziendali (SIA)</strong>.
   </p>
   <p>
