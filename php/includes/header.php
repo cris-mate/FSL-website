@@ -1,3 +1,6 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -11,12 +14,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/MateiManuelaNatalis_FSL/index.php">Matei Manuela Natalis FSL</a>
-    <div class="collapse navbar-collapse">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/MateiManuelaNatalis_FSL/php/azienda.php">Azienda</a></li>
-        <li class="nav-item"><a class="nav-link" href="/MateiManuelaNatalis_FSL/php/stage.php">Stage</a></li>
-        <li class="nav-item"><a class="nav-link" href="/MateiManuelaNatalis_FSL/php/orientamento.php">Orientamento</a></li>
-        <li class="nav-item"><a class="nav-link" href="/MateiManuelaNatalis_FSL/php/gestione.php">Gestione DB</a></li>
+        <li class="nav-item"><a class="nav-link <?= $current_page === 'azienda.php' ? 'active' : '' ?>" href="/MateiManuelaNatalis_FSL/php/azienda.php">Azienda</a></li>
+        <li class="nav-item"><a class="nav-link <?= $current_page === 'stage.php' ? 'active' : '' ?>" href="/MateiManuelaNatalis_FSL/php/stage.php">Stage</a></li>
+        <li class="nav-item"><a class="nav-link <?= $current_page === 'orientamento.php' ? 'active' : '' ?>" href="/MateiManuelaNatalis_FSL/php/orientamento.php">Orientamento</a></li>
+        <li class="nav-item"><a class="nav-link <?= $current_page === 'gestione.php' ? 'active' : '' ?>" href="/MateiManuelaNatalis_FSL/php/gestione.php">Gestione DB</a></li>
       </ul>
     </div>
   </div>
