@@ -5,9 +5,9 @@
 <!-- Info Azienda -->
 <div class="card card-hover mb-4">
   <div class="card-body">
-    <h4 class="card-title mb-3">🏢 Studio Commercialista</h4>
+    <h4 class="card-title mb-3">🏢 Studio Commercialista Federico Prignacca</h4>
     <p>
-      Nel 2023 ho svolto il mio percorso PCTO presso uno studio di commercialista
+      Nel 2023 ho svolto il mio percorso PCTO presso lo Studio Commercialista Federico Prignacca,
       situato a Montichiari. Lo studio si occupa principalmente di consulenza fiscale,
       contabile e amministrativa per imprese e privati.
     </p>
