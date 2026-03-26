@@ -1,4 +1,4 @@
-<?php
+<?php 
 include '../php/includes/db.php';
 include '../php/includes/header.php';
 
@@ -15,33 +15,76 @@ if (isset($_GET['elimina'])) {
     $tipo_messaggio = 'success';
 }
 
+// --- Funzione di validazione ---
+function validaDati($post) {
+    $errori = [];
+ 
+    $azienda = trim($post['azienda'] ?? '');
+    $ruolo = trim($post['ruolo'] ?? '');
+    $dataInizio = $post['data_inizio'] ?? '';
+    $dataFine = $post['data_fine'] ?? '';
+    $descrizione = $post['descrizione'] ?? '';
+ 
+    if (strlen($azienda) < 2) {
+        $errori[] = 'Il nome dell\'azienda deve avere almeno 2 caratteri.';
+    }
+ 
+    if (strlen($ruolo) < 2) {
+        $errori[] = 'Il ruolo deve avere almeno 2 caratteri.';
+    }
+ 
+    if ($dataInizio && $dataFine && $dataFine < $dataInizio) {
+        $errori[] = 'La data di fine non può essere precedente alla data di inizio.';
+    }
+ 
+    if (strlen($descrizione) > 500) {
+        $errori[] = 'La descrizione non può superare i 500 caratteri.';
+    }
+ 
+    return $errori;
+}
+
 // INSERT
 if (isset($_POST['inserisci'])) {
-    $stmt = $pdo->prepare("INSERT INTO stage (azienda, ruolo, data_inizio, data_fine, descrizione) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([
-        $_POST['azienda'],
-        $_POST['ruolo'],
-        $_POST['data_inizio'] ?: null,
-        $_POST['data_fine'] ?: null,
-        $_POST['descrizione']
-    ]);
-    $messaggio = 'Esperienza inserita con successo.';
-    $tipo_messaggio = 'success';
+    $errori = validaDati($_POST);
+ 
+    if (empty($errori)) {
+        $stmt = $pdo->prepare("INSERT INTO stage (azienda, ruolo, data_inizio, data_fine, descrizione) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([
+            trim($_POST['azienda']),
+            trim($_POST['ruolo']),
+            $_POST['data_inizio'] ?: null,
+            $_POST['data_fine'] ?: null,
+            $_POST['descrizione']
+        ]);
+        $messaggio = 'Esperienza inserita con successo.';
+        $tipo_messaggio = 'success';
+    } else {
+        $messaggio = implode('<br>', $errori);
+        $tipo_messaggio = 'danger';
+    }
 }
 
 // UPDATE
 if (isset($_POST['aggiorna'])) {
-    $stmt = $pdo->prepare("UPDATE stage SET azienda = ?, ruolo = ?, data_inizio = ?, data_fine = ?, descrizione = ? WHERE id = ?");
-    $stmt->execute([
-        $_POST['azienda'],
-        $_POST['ruolo'],
-        $_POST['data_inizio'] ?: null,
-        $_POST['data_fine'] ?: null,
-        $_POST['descrizione'],
-        (int) $_POST['id']
-    ]);
-    $messaggio = 'Esperienza aggiornata con successo.';
-    $tipo_messaggio = 'success';
+    $errori = validaDati($_POST);
+ 
+    if (empty($errori)) {
+        $stmt = $pdo->prepare("UPDATE stage SET azienda = ?, ruolo = ?, data_inizio = ?, data_fine = ?, descrizione = ? WHERE id = ?");
+        $stmt->execute([
+            trim($_POST['azienda']),
+            trim($_POST['ruolo']),
+            $_POST['data_inizio'] ?: null,
+            $_POST['data_fine'] ?: null,
+            $_POST['descrizione'],
+            (int) $_POST['id']
+        ]);
+        $messaggio = 'Esperienza aggiornata con successo.';
+        $tipo_messaggio = 'success';
+    } else {
+        $messaggio = implode('<br>', $errori);
+        $tipo_messaggio = 'danger';
+    }
 }
 
 // Carica dati per modifica
@@ -70,7 +113,7 @@ $esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!-- Introduzione -->
 <div class="card card-hover mb-4">
   <div class="card-body">
-    <h4 class="card-title mb-3">🗄️ Operazioni CRUD</h4>
+    <h4 class="card-title mb-3">Operazioni CRUD</h4>
     <p>
       Questa sezione permette di gestire i dati delle esperienze di stage
       tramite un'interfaccia collegata al database MySQL. È possibile inserire
