@@ -1,4 +1,3 @@
-<!-- php/includes/db.php -->
 <?php
 $host = 'localhost';
 $dbname = 'pcto_db';
