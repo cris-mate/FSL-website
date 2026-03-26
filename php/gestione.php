@@ -178,4 +178,6 @@ $esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <a href="/MateiManuelaNatalis_FSL/index.php" class="btn btn-outline-dark">Home &rarr;</a>
 </div>
 
+<script src="/MateiManuelaNatalis_FSL/js/validation.js"></script>
+
 <?php include '../php/includes/footer.php'; ?>
