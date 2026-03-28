@@ -12,7 +12,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
   <link rel="stylesheet" href="<?= BASE_URL ?>/css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="<?= BASE_URL ?>/index.php">Matei Manuela Natalis FSL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
