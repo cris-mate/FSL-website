@@ -16,56 +16,54 @@
 </div>
 
 <!-- Percorso Settimanale -->
-<h5 class="fw-bold mb-3">Percorso settimanale</h5>
-<div class="row g-4 mb-4">
-  <div class="col-md-4">
-    <div class="card h-100 card-hover">
-      <div class="card-body">
-        <h6 class="card-title">
-          <span class="badge bg-warm me-2">1</span>Inserimento e osservazione
-        </h6>
-        <p class="small">
-          Analisi dell'organizzazione dello studio e dei flussi di lavoro. 
-          Familiarizzazione con il gestionale Zucchetti e osservazione delle attività contabili. 
-          Lettura di documenti base: fatture, ricevute, estratti conto.
-        </p>
-        <p class="text-muted small mb-0">
-          <strong>Obiettivo:</strong> capire come funziona lo studio prima di operare.
-        </p>
+<div class="card card-hover mb-4">
+  <div class="card-body">
+    <h5 class="card-title mb-3">Percorso settimanale</h5>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">
+            <span class="badge bg-warm me-2">1</span>Inserimento e osservazione
+          </h6>
+          <p class="small mb-2">
+            Apprendimento dell'organizzazione dello studio e dei flussi di lavoro. 
+            Familiarizzazione con il gestionale Zucchetti e osservazione delle attività contabili. 
+            Lettura di documenti base: fatture, ricevute, estratti conto.
+          </p>
+          <p class="text-muted small mb-0">
+            <strong>Obiettivo:</strong> capire come funziona lo studio prima di operare.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 card-hover">
-      <div class="card-body">
-        <h6 class="card-title">
-          <span class="badge bg-warm me-2">2</span>Attività operative guidate
-        </h6>
-        <p class="small">
-          Inserimento dati nel gestionale: registrazione fatture e anagrafiche clienti. 
-          Utilizzo base di Excel per organizzare dati in tabelle. 
-          Registrazione di operazioni contabili semplici con supervisione.
-        </p>
-        <p class="text-muted small mb-0">
-          <strong>Obiettivo:</strong> iniziare a lavorare con supervisione.
-        </p>
+      <div class="col-md-4">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">
+            <span class="badge bg-warm me-2">2</span>Attività operative guidate
+          </h6>
+          <p class="small mb-2">
+            Inserimento dati nel gestionale: registrazione fatture e anagrafiche clienti. 
+            Utilizzo base di Excel per organizzare dati in tabelle. 
+            Registrazione di operazioni contabili semplici con supervisione.
+          </p>
+          <p class="text-muted small mb-0">
+            <strong>Obiettivo:</strong> iniziare a lavorare con supervisione.
+          </p>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card h-100 card-hover">
-      <div class="card-body">
-        <h6 class="card-title">
-          <span class="badge bg-warm me-2">3</span>Attività più autonome
-        </h6>
-        <p class="small">
-          Controllo completezza documenti e fatture. Utilizzo più attivo di Excel 
-          con semplici calcoli. Gestione autonoma di piccole attività e supporto 
-          nella preparazione di documenti fiscali.
-        </p>
-        <p class="text-muted small mb-0">
-          <strong>Obiettivo:</strong> aumentare autonomia e precisione.
-        </p>
+      <div class="col-md-4">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">
+            <span class="badge bg-warm me-2">3</span>Attività più autonome
+          </h6>
+          <p class="small mb-2">
+            Controllo completezza documenti e fatture. Utilizzo più attivo di Excel 
+            con semplici calcoli. Gestione autonoma di piccole attività e supporto 
+            nella preparazione di documenti fiscali.
+          </p>
+          <p class="text-muted small mb-0">
+            <strong>Obiettivo:</strong> aumentare autonomia e precisione.
+          </p>
+        </div>
       </div>
     </div>
   </div>
