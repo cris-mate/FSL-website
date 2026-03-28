@@ -1,8 +1,8 @@
-// === Form Validation ===
+// === Validazione del modulo per la gestione del database ===
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // --- Auto-dismiss alerts after 4 seconds ---
+  // --- Chiude automaticamente gli avvisi dopo 4 secondi ---
   const alerts = document.querySelectorAll('.alert-dismissible');
   alerts.forEach(function (alert) {
     setTimeout(function () {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 4000);
   });
 
-  // --- Character counter for description ---
+  // --- Contatore di caratteri per la descrizione ---
   const descrizione = document.getElementById('descrizione');
   if (descrizione) {
     const maxChars = 500;
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Form validation ---
+  // --- Convalida del modulo ---
   const form = document.querySelector('form[method="POST"]');
   if (!form) return;
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dataFine = document.getElementById('data_fine');
     let hasErrors = false;
 
-    // Validate azienda
+    // Convalida l'azienda
     if (!azienda.value.trim()) {
       showError(azienda, 'Il campo Azienda è obbligatorio.');
       hasErrors = true;
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hasErrors = true;
     }
 
-    // Validate ruolo
+    // Convalida il ruolo
     if (!ruolo.value.trim()) {
       showError(ruolo, 'Il campo Ruolo è obbligatorio.');
       hasErrors = true;
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
       hasErrors = true;
     }
 
-    // Validate date logic
+    // Convalida la logica della data
     if (dataInizio.value && dataFine.value) {
       if (new Date(dataFine.value) < new Date(dataInizio.value)) {
         showError(dataFine, 'La data di fine non può essere precedente alla data di inizio.');
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // --- Helper: show inline error below a field ---
+  // --- Helper: mostra l'errore sotto un campo ---
   function showError(field, message) {
     field.classList.add('is-invalid');
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     field.parentNode.appendChild(error);
   }
 
-  // --- Helper: clear all previous errors ---
+  // --- Helper: cancella tutti gli errori precedenti ---
   function clearErrors() {
     const invalids = form.querySelectorAll('.is-invalid');
     invalids.forEach(function (field) {
