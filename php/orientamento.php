@@ -57,8 +57,8 @@
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="<?= BASE_URL ?>/php/stage.php" class="btn btn-outline-dark">&larr; Indietro</a>
-  <a href="<?= BASE_URL ?>/php/gestione.php" class="btn btn-outline-dark">Prossima sezione &rarr;</a>
+  <a href="<?= BASE_URL ?>/php/stage.php" class="btn btn-outline-warm">&larr; Indietro</a>
+  <a href="<?= BASE_URL ?>/php/gestione.php" class="btn btn-outline-warm">Prossima sezione &rarr;</a>
 </div>
 
 <?php include '../php/includes/footer.php'; ?>
