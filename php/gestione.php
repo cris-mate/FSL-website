@@ -1,5 +1,5 @@
 <?php
-include '../php/includes/connessione.php';
+include '../php/includes/db.php';
 include '../php/includes/header.php';
 
 // Messaggi di feedback
@@ -187,10 +187,10 @@ try {
         </div>
         <div class="col-12">
           <?php if ($modifica): ?>
-            <button type="submit" name="aggiorna" class="btn btn-dark">Aggiorna</button>
+            <button type="submit" name="aggiorna" class="btn btn-warm">Aggiorna</button>
             <a href="gestione.php" class="btn btn-outline-secondary ms-2">Annulla</a>
           <?php else: ?>
-            <button type="submit" name="inserisci" class="btn btn-dark">Inserisci</button>
+            <button type="submit" name="inserisci" class="btn btn-warm">Inserisci</button>
           <?php endif; ?>
         </div>
       </div>
@@ -206,7 +206,7 @@ try {
     <?php if (count($esperienze) > 0): ?>
       <div class="table-responsive">
         <table class="table table-striped table-hover align-middle">
-          <thead class="table-dark">
+          <thead class="table-warm">
             <tr>
               <th>Azienda</th>
               <th>Ruolo</th>
@@ -225,7 +225,7 @@ try {
                 <td><?= $row['data_fine'] ? date('d/m/Y', strtotime($row['data_fine'])) : '—' ?></td>
                 <td><?= htmlspecialchars($row['descrizione'] ?? '') ?></td>
                 <td class="text-nowrap">
-                  <a href="gestione.php?modifica=<?= $row['id'] ?>" class="btn btn-sm btn-outline-dark">Modifica</a>
+                  <a href="gestione.php?modifica=<?= $row['id'] ?>" class="btn btn-sm btn-outline-warm">Modifica</a>
                   <a href="gestione.php?elimina=<?= $row['id'] ?>"
                      class="btn btn-sm btn-outline-danger"
                      onclick="return confirm('Sei sicura di voler eliminare questa esperienza?')">Elimina</a>
@@ -243,8 +243,8 @@ try {
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="<?= BASE_URL ?>/php/orientamento.php" class="btn btn-outline-dark">&larr; Indietro</a>
-  <a href="<?= BASE_URL ?>/index.php" class="btn btn-outline-dark">Home &rarr;</a>
+  <a href="<?= BASE_URL ?>/php/orientamento.php" class="btn btn-outline-warm">&larr; Indietro</a>
+  <a href="<?= BASE_URL ?>/index.php" class="btn btn-outline-warm">Home &rarr;</a>
 </div>
 
 <script src="<?= BASE_URL ?>/js/validation.js"></script>
