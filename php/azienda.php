@@ -1,3 +1,5 @@
+<?php include '../php/includes/header.php'; ?>
+
 <!-- Info Azienda -->
 <div class="card card-hover mb-4">
   <div class="card-body">
