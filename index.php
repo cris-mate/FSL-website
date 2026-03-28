@@ -2,7 +2,7 @@
 
 <!-- Hero Section -->
 <section class="hero-section text-center py-5 mb-4 rounded-3">
-  <h1 class="display-5 fw-bold">Percorsi per le Competenze Trasversali e l'Orientamento</h1>
+  <h1 class="display-6 fw-bold">Percorsi per le Competenze Trasversali e l'Orientamento</h1>
   <p class="lead mt-3">Matei Manuela Natalis — Classe 5ª Sistemi Informativi Aziendali</p>
   <p class="text-muted">Istituto di Istruzione Superiore <strong>Don Milani</strong>, Montichiari (BS) — A.S. 2025/2026</p>
 </section>
@@ -11,8 +11,8 @@
 <section class="mb-5">
   <h2 class="section-title mb-3">Il Progetto</h2>
   <p>
-    Questo sito web rappresenta il mio portfolio digitale dei <strong>Percorsi per le Competenze Trasversali e l'Orientamento (PCTO)</strong>, 
-    realizzato come progetto finale del percorso scolastico nell'indirizzo <strong>Sistemi Informativi Aziendali (SIA)</strong>.
+    Questo sito web rappresenta il mio portfolio digitale dei <strong>Percorsi per le Competenze Trasversali e l'Orientamento</strong> (PCTO), 
+    realizzato come progetto finale del percorso scolastico nell'indirizzo <strong>Sistemi Informativi Aziendali</strong> (SIA).
   </p>
   <p>
     L'obiettivo è documentare le esperienze di stage, le attività di orientamento e le 
