@@ -1,5 +1,5 @@
 <?php
-include '../php/includes/db.php';
+include '../php/includes/connessione.php';
 include '../php/includes/header.php';
 
 // Messaggi di feedback
