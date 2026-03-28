@@ -5,7 +5,7 @@
 <!-- Panoramica -->
 <div class="card card-hover mb-4">
   <div class="card-body">
-    <h4 class="card-title mb-3">💼 La mia esperienza di PCTO</h4>
+    <h4 class="card-title mb-3">La mia esperienza di PCTO</h4>
     <div class="row">
       <div class="col-md-6">
         <h5>Quando?</h5>
