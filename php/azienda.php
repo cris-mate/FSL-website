@@ -1,7 +1,7 @@
 <!-- Info Azienda -->
 <div class="card card-hover mb-4">
   <div class="card-body">
-    <h4 class="card-title mb-3">🏢 Studio Commercialista Federico Prignacca</h4>
+    <h4 class="card-title mb-3">Studio Commercialista Federico Prignacca</h4>
     <p>
       Dal <strong>5 giugno al 24 giugno 2023</strong> ho svolto il mio percorso PCTO presso 
       lo Studio Commercialista Federico Prignacca, situato in <strong>Via Trieste, 77/F, 
@@ -12,7 +12,7 @@
       <div class="col-md-4">
         <div class="tech-stack-box p-3 rounded-3 h-100">
           <h6 class="fw-bold">Forma giuridica</h6>
-          <p class="mb-0 small">Ditta individuale — libero professionista iscritto all'ODCEC</p>
+          <p class="mb-0 small">Ditta individuale: libero professionista iscritto all'ODCEC</p>
         </div>
       </div>
       <div class="col-md-4">
@@ -24,7 +24,7 @@
       <div class="col-md-4">
         <div class="tech-stack-box p-3 rounded-3 h-100">
           <h6 class="fw-bold">Sede</h6>
-          <p class="mb-0 small">Via Trieste, 77/F — Montichiari (BS)</p>
+          <p class="mb-0 small">Via Trieste, 77/F, Montichiari (BS)</p>
         </div>
       </div>
     </div>
