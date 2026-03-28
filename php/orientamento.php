@@ -5,7 +5,7 @@
 <!-- Panoramica -->
 <div class="card card-hover mb-4">
   <div class="card-body">
-    <h4 class="card-title mb-3">🧭 Orientamento nel triennio</h4>
+    <h4 class="card-title mb-3">Orientamento nel triennio</h4>
     <p>
       Durante il triennio ho partecipato ad attività di orientamento finalizzate
       alla conoscenza del mondo universitario e professionale. Ho preso parte a
@@ -57,8 +57,8 @@
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="/MateiManuelaNatalis_FSL/php/stage.php" class="btn btn-outline-dark">&larr; Indietro</a>
-  <a href="/MateiManuelaNatalis_FSL/php/gestione.php" class="btn btn-outline-dark">Prossima sezione &rarr;</a>
+  <a href="<?= BASE_URL ?>/php/stage.php" class="btn btn-outline-dark">&larr; Indietro</a>
+  <a href="<?= BASE_URL ?>/php/gestione.php" class="btn btn-outline-dark">Prossima sezione &rarr;</a>
 </div>
 
 <?php include '../php/includes/footer.php'; ?>
