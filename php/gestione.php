@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../php/includes/db.php';
 include '../php/includes/header.php';
 
@@ -9,56 +9,66 @@ $tipo_messaggio = '';
 // DELETE
 if (isset($_GET['elimina'])) {
     $id = (int) $_GET['elimina'];
-    $stmt = $pdo->prepare("DELETE FROM stage WHERE id = ?");
-    $stmt->execute([$id]);
-    $messaggio = 'Esperienza eliminata con successo.';
-    $tipo_messaggio = 'success';
+    try {
+        $stmt = $pdo->prepare("DELETE FROM stage WHERE id = ?");
+        $stmt->execute([$id]);
+        $messaggio = 'Esperienza eliminata con successo.';
+        $tipo_messaggio = 'success';
+    } catch (PDOException $e) {
+        $messaggio = 'Errore durante l\'eliminazione. Riprovare più tardi.';
+        $tipo_messaggio = 'danger';
+    }
 }
 
 // --- Funzione di validazione ---
 function validaDati($post) {
     $errori = [];
- 
+
     $azienda = trim($post['azienda'] ?? '');
     $ruolo = trim($post['ruolo'] ?? '');
     $dataInizio = $post['data_inizio'] ?? '';
     $dataFine = $post['data_fine'] ?? '';
     $descrizione = $post['descrizione'] ?? '';
- 
+
     if (strlen($azienda) < 2) {
         $errori[] = 'Il nome dell\'azienda deve avere almeno 2 caratteri.';
     }
- 
+
     if (strlen($ruolo) < 2) {
         $errori[] = 'Il ruolo deve avere almeno 2 caratteri.';
     }
- 
+
     if ($dataInizio && $dataFine && $dataFine < $dataInizio) {
         $errori[] = 'La data di fine non può essere precedente alla data di inizio.';
     }
- 
+
     if (strlen($descrizione) > 500) {
         $errori[] = 'La descrizione non può superare i 500 caratteri.';
     }
- 
+
     return $errori;
 }
 
 // INSERT
 if (isset($_POST['inserisci'])) {
     $errori = validaDati($_POST);
- 
+
     if (empty($errori)) {
-        $stmt = $pdo->prepare("INSERT INTO stage (azienda, ruolo, data_inizio, data_fine, descrizione) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([
-            trim($_POST['azienda']),
-            trim($_POST['ruolo']),
-            $_POST['data_inizio'] ?: null,
-            $_POST['data_fine'] ?: null,
-            $_POST['descrizione']
-        ]);
-        $messaggio = 'Esperienza inserita con successo.';
-        $tipo_messaggio = 'success';
+        try {
+            $stmt = $pdo->prepare("INSERT INTO stage (azienda, ruolo, data_inizio, data_fine, descrizione) VALUES (?, ?, ?, ?, ?)");
+            $stmt->execute([
+                trim($_POST['azienda']),
+                trim($_POST['ruolo']),
+                $_POST['data_inizio'] ?: null,
+                $_POST['data_fine'] ?: null,
+                $_POST['descrizione']
+            ]);
+            $messaggio = 'Esperienza inserita con successo.';
+            $tipo_messaggio = 'success';
+        } catch (PDOException $e) {
+            $messaggio = 'Errore durante l\'inserimento. Riprovare più tardi.';
+            $tipo_messaggio = 'danger';
+        }
     } else {
         $messaggio = implode('<br>', $errori);
         $tipo_messaggio = 'danger';
@@ -68,19 +78,24 @@ if (isset($_POST['inserisci'])) {
 // UPDATE
 if (isset($_POST['aggiorna'])) {
     $errori = validaDati($_POST);
- 
+
     if (empty($errori)) {
-        $stmt = $pdo->prepare("UPDATE stage SET azienda = ?, ruolo = ?, data_inizio = ?, data_fine = ?, descrizione = ? WHERE id = ?");
-        $stmt->execute([
-            trim($_POST['azienda']),
-            trim($_POST['ruolo']),
-            $_POST['data_inizio'] ?: null,
-            $_POST['data_fine'] ?: null,
-            $_POST['descrizione'],
-            (int) $_POST['id']
-        ]);
-        $messaggio = 'Esperienza aggiornata con successo.';
-        $tipo_messaggio = 'success';
+        try {
+            $stmt = $pdo->prepare("UPDATE stage SET azienda = ?, ruolo = ?, data_inizio = ?, data_fine = ?, descrizione = ? WHERE id = ?");
+            $stmt->execute([
+                trim($_POST['azienda']),
+                trim($_POST['ruolo']),
+                $_POST['data_inizio'] ?: null,
+                $_POST['data_fine'] ?: null,
+                $_POST['descrizione'],
+                (int) $_POST['id']
+            ]);
+            $messaggio = 'Esperienza aggiornata con successo.';
+            $tipo_messaggio = 'success';
+        } catch (PDOException $e) {
+            $messaggio = 'Errore durante l\'aggiornamento. Riprovare più tardi.';
+            $tipo_messaggio = 'danger';
+        }
     } else {
         $messaggio = implode('<br>', $errori);
         $tipo_messaggio = 'danger';
@@ -91,21 +106,32 @@ if (isset($_POST['aggiorna'])) {
 $modifica = null;
 if (isset($_GET['modifica'])) {
     $id = (int) $_GET['modifica'];
-    $stmt = $pdo->prepare("SELECT * FROM stage WHERE id = ?");
-    $stmt->execute([$id]);
-    $modifica = $stmt->fetch(PDO::FETCH_ASSOC);
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM stage WHERE id = ?");
+        $stmt->execute([$id]);
+        $modifica = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        $messaggio = 'Errore durante il caricamento dei dati.';
+        $tipo_messaggio = 'danger';
+    }
 }
 
 // SELECT
-$stmt = $pdo->query("SELECT * FROM stage ORDER BY data_inizio DESC");
-$esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
+try {
+    $stmt = $pdo->query("SELECT * FROM stage ORDER BY data_inizio DESC");
+    $esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $esperienze = [];
+    $messaggio = 'Errore durante il caricamento delle esperienze.';
+    $tipo_messaggio = 'danger';
+}
 ?>
 
 <h2 class="section-title mb-4">Gestione Database</h2>
 
 <?php if ($messaggio): ?>
   <div class="alert alert-<?= $tipo_messaggio ?> alert-dismissible fade show" role="alert">
-    <?= htmlspecialchars($messaggio) ?>
+    <?= $messaggio ?>
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   </div>
 <?php endif; ?>
@@ -217,10 +243,10 @@ $esperienze = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- Navigazione tra le sezioni -->
 <div class="d-flex justify-content-between mt-5">
-  <a href="/MateiManuelaNatalis_FSL/php/orientamento.php" class="btn btn-outline-dark">&larr; Indietro</a>
-  <a href="/MateiManuelaNatalis_FSL/index.php" class="btn btn-outline-dark">Home &rarr;</a>
+  <a href="<?= BASE_URL ?>/php/orientamento.php" class="btn btn-outline-dark">&larr; Indietro</a>
+  <a href="<?= BASE_URL ?>/index.php" class="btn btn-outline-dark">Home &rarr;</a>
 </div>
 
-<script src="/MateiManuelaNatalis_FSL/js/validation.js"></script>
+<script src="<?= BASE_URL ?>/js/validation.js"></script>
 
 <?php include '../php/includes/footer.php'; ?>
