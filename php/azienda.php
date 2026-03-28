@@ -71,9 +71,10 @@
       </div>
     </div>
     <p class="mt-3 mb-0">
-      Queste figure professionali si avvalgono spesso di software gestionali specializzati 
-      (come TeamSystem o Zucchetti) per gestire la contabilità dei clienti, elaborare 
-      le buste paga e produrre le dichiarazioni fiscali nei tempi previsti dalla normativa italiana.
+      Queste figure professionali si avvalgono di software gestionali specializzati 
+      per gestire la contabilità dei clienti, elaborare le buste paga e produrre le 
+      dichiarazioni fiscali. Lo Studio Prignacca utilizza Zucchetti, uno dei principali 
+      software gestionali italiani per studi professionali.
     </p>
   </div>
 </div>
@@ -87,6 +88,80 @@
       elaborazione dichiarazioni dei redditi, consulenza fiscale, gestione buste paga
       e assistenza alle imprese nelle pratiche amministrative. I clienti principali sono piccole e medie imprese, liberi professionisti
       e privati cittadini.
+    </p>
+  </div>
+</div>
+
+<!-- Organizzazione Interna -->
+<div class="card card-hover mb-4">
+  <div class="card-body">
+    <h5 class="card-title mb-4">Organizzazione Interna</h5>
+    <p>
+      Lo studio è composto da cinque persone, ognuna con un ruolo specifico all'interno 
+      dell'organizzazione. Durante il mio stage ho potuto osservare come ogni figura 
+      contribuisca al funzionamento quotidiano dello studio.
+    </p>
+    <div class="row g-3 mt-2">
+      <div class="col-md-6">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">Titolare</h6>
+          <p class="mb-0 small">
+            Responsabile legale dello studio. Si occupa della firma dei bilanci, 
+            delle consulenze strategiche ai clienti e della supervisione generale.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">Segretaria</h6>
+          <p class="mb-0 small">
+            Figura di grande esperienza, gestisce l'organizzazione quotidiana 
+            dello studio, gli appuntamenti e il coordinamento delle attività.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">Collaboratrice Commercialista</h6>
+          <p class="mb-0 small">
+            Si occupa principalmente delle pratiche relative ad aziende 
+            in fase di liquidazione e delle procedure più complesse.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tech-stack-box p-3 rounded-3 h-100">
+          <h6 class="fw-bold">Impiegata Contabile</h6>
+          <p class="mb-0 small">
+            Gestisce le operazioni quotidiane: registrazione fatture, 
+            dichiarazioni dei redditi e rapporti con i clienti.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Perché ho scelto questo studio -->
+<div class="card card-hover mb-4">
+  <div class="card-body">
+    <h5 class="card-title mb-3">Perché ho scelto questo studio</h5>
+    <p>
+      La scelta dello studio per il PCTO è stata guidata da diversi fattori. 
+      Un amico che aveva svolto lo stage qui mi aveva descritto un ambiente ben organizzato, 
+      dove gli stagisti vengono coinvolti in attività reali e non relegati a compiti 
+      puramente amministrativi. Volevo acquisire competenze concrete, utili per il mio futuro professionale.
+    </p>
+    <p>
+      Essendo uno studio di piccole dimensioni, ho avuto l'opportunità di lavorare 
+      a stretto contatto con il titolare e la collaboratrice commercialista, 
+      figure che hanno potuto dedicarmi tempo per spiegarmi i processi e correggere i miei errori. 
+      La qualità del tutor e la disponibilità a insegnare fanno una grande differenza 
+      nell'esperienza formativa di uno stagista.
+    </p>
+    <p class="mb-0">
+      Infine, la vicinanza dello studio a casa mia ha reso più semplice 
+      la gestione degli spostamenti quotidiani.
     </p>
   </div>
 </div>
