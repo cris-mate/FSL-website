@@ -15,9 +15,7 @@
     realizzato come progetto finale del percorso scolastico nell'indirizzo <strong>Sistemi Informativi Aziendali</strong> (SIA).
   </p>
   <p>
-    L'obiettivo è raccogliere le esperienze di stage, le attività di orientamento e le 
-    competenze acquisite durante il triennio, dimostrando al contempo le capacità tecniche 
-    sviluppate nello sviluppo web full-stack.
+    L'obiettivo è raccogliere le esperienze di stage, le attività di orientamento e le competenze acquisite durante il triennio, dimostrando al contempo le capacità tecniche sviluppate nello sviluppo web full-stack.
   </p>
 </section>
 
