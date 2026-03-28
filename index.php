@@ -3,8 +3,8 @@
 <!-- Hero Section -->
 <section class="hero-section text-center py-5 mb-4 rounded-3">
   <h1 class="display-6 fw-bold">Percorsi per le Competenze Trasversali e l'Orientamento</h1>
-  <p class="lead mt-3">Matei Manuela Natalis — Classe 5ª Sistemi Informativi Aziendali</p>
-  <p class="text-muted">Istituto di Istruzione Superiore <strong>Don Milani</strong>, Montichiari (BS) — A.S. 2025/2026</p>
+  <p class="lead mt-3"><strong>Matei Manuela Natalis</strong> — Classe 5ª Sistemi Informativi Aziendali</p>
+  <p class="lead mt-3">Istituto di Istruzione Superiore <strong>Don Milani</strong>, Montichiari (BS) — A.S. 2025/2026</p>
 </section>
 
 <!-- Descrizione del Progetto -->
@@ -32,7 +32,7 @@
           <div class="card-icon mb-3">🏢</div>
           <h5 class="card-title">Azienda</h5>
           <p class="card-text">Presentazione delle aziende ospitanti e del contesto lavorativo in cui ho svolto lo stage.</p>
-          <a href="php/azienda.php" class="btn btn-outline-dark btn-sm mt-auto">Scopri di più</a>
+          <a href="php/azienda.php" class="btn btn-outline-warm btn-sm mt-auto">Scopri di più</a>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
           <div class="card-icon mb-3">💼</div>
           <h5 class="card-title">Stage</h5>
           <p class="card-text">Dettagli sulle attività svolte, competenze acquisite e riflessioni sull'esperienza lavorativa.</p>
-          <a href="php/stage.php" class="btn btn-outline-dark btn-sm mt-auto">Scopri di più</a>
+          <a href="php/stage.php" class="btn btn-outline-warm btn-sm mt-auto">Scopri di più</a>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
           <div class="card-icon mb-3">🧭</div>
           <h5 class="card-title">Orientamento</h5>
           <p class="card-text">Esperienze di orientamento universitario e professionale che hanno guidato le mie scelte future.</p>
-          <a href="php/orientamento.php" class="btn btn-outline-dark btn-sm mt-auto">Scopri di più</a>
+          <a href="php/orientamento.php" class="btn btn-outline-warm btn-sm mt-auto">Scopri di più</a>
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@
           <div class="card-icon mb-3">🗄️</div>
           <h5 class="card-title">Gestione DB</h5>
           <p class="card-text">Interfaccia CRUD per la gestione dei dati degli stage tramite database MySQL.</p>
-          <a href="php/gestione.php" class="btn btn-outline-dark btn-sm mt-auto">Scopri di più</a>
+          <a href="php/gestione.php" class="btn btn-outline-warm btn-sm mt-auto">Scopri di più</a>
         </div>
       </div>
     </div>
@@ -99,12 +99,12 @@
     <div class="col-lg-4 text-center mt-4 mt-lg-0">
       <div class="tech-stack-box p-4 rounded-3">
         <h6 class="fw-bold mb-3">Stack Tecnologico</h6>
-        <span class="badge bg-dark me-1 mb-2">HTML5</span>
-        <span class="badge bg-dark me-1 mb-2">CSS3</span>
-        <span class="badge bg-dark me-1 mb-2">Bootstrap 5</span>
-        <span class="badge bg-dark me-1 mb-2">JavaScript</span>
-        <span class="badge bg-dark me-1 mb-2">PHP</span>
-        <span class="badge bg-dark me-1 mb-2">MySQL</span>
+        <span class="badge bg-warm me-1 mb-2">HTML5</span>
+        <span class="badge bg-warm me-1 mb-2">CSS3</span>
+        <span class="badge bg-warm me-1 mb-2">Bootstrap 5</span>
+        <span class="badge bg-warm me-1 mb-2">JavaScript</span><br>
+        <span class="badge bg-warm me-1 mb-2">PHP</span>
+        <span class="badge bg-warm me-1 mb-2">MySQL</span>
       </div>
     </div>
   </div>
