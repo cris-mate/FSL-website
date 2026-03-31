@@ -72,7 +72,7 @@
             sulle competenze richieste nel mondo del lavoro e sulle metodologie
             di apprendimento continuo.
           </p>
-          <p class="text-muted small mb-0">Docente: Carmelina Diaspro</p>
+          <p class="text-muted small mb-2">Docente: Carmelina Diaspro</p>
           <a href="https://hubconoscenza.it/hub-della-conoscenza-a-futura-expo/" 
              target="_blank" class="btn btn-outline-warm btn-sm">Dettagli evento</a>
         </div>
